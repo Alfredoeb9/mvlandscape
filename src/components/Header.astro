@@ -1,0 +1,133 @@
+---
+import Hamburger from "./Hamburger.astro"
+
+    const navigation_links = {
+        main: ["Home", "About", "Services"],
+        
+    }
+---
+
+<header class="header-navigation bg-white">
+    <nav class="nav flex flex-row justify-between items-center text-black p-5 ">
+      <div>
+        <a href="/">MVLandscape</a>
+      </div>
+
+      <Hamburger />
+
+      <ul class="nav-links bg-pink-50 flex flex-col bg-pink fixed top-0 bottom-0 left-0 right-[54%] text-center items-stretch justify-around z-10 transform: translate-x-[-100%] transition ease-in-out transition-duration-[0.5s] lg:transform-none lg:flex-row lg:relative lg:bg-transparent">
+        <li class="hover:bg-slate-200">
+          <a class="inline-block p-[calc(100vh/8)] lg:p-5" href="/">Home</a>
+        </li>
+        <li class="hover:bg-slate-200">
+          <a class="inline-block p-[calc(100vh/8)] lg:p-5"href="/about">About</a>
+        </li>
+        <li class="services hover:bg-slate-200 inline-block p-[calc(100vh/8)] lg:p-5">
+          Services
+            <ul class="services-dropdown hidden absolute bg-pink-50 min-w-[135px] right-[-125px] z-[1] transition ease-in-out transition-duration-[0.5s] lg:right-[-19px] lg:bg-slate-50 lg:top-[64px]">
+              <a class="text-black py-3 px-4 block hover:bg-[#ddd]" href="/services/residential">Residential Services</a>
+              <a class="text-black py-3 px-4 block hover:bg-[#ddd]" href="/services/commerical">Commerical Services</a>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+</header>
+
+<style>
+  .expanded {
+    display: block !important;
+    /* position: absolute; */
+    
+    width: 155px!important;
+    height: 300px!important;
+    /* left: 0;
+    top: 0;
+    bottom: 0; */
+    z-index: 1;
+    visibility: visible!important;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .show {
+    transform: translateX(0)!important;
+    /* visibility: visible!important;
+    width: inherit!important;
+    height: 50px!important;
+    opacity: 1!important;
+    transition-delay: .3s!important; */
+  }
+
+  .show_services {
+    display: block!important;
+  }
+
+  @media screen and (max-width: 636px) {
+    .nav-links {
+      /* display: none; */
+      /* background: pink;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 20%;
+      z-index: 10;
+
+      transform: translateX(-100%);
+      transition: all ease-in-out 250ms; */
+      /* visibility: hidden;
+      width: 0px;
+      height: 0px; */
+      /* transition: all 0.5s ease-in-out; */
+    }
+
+    .nav-links li {
+      /* margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      text-align: center; */
+      /* height: 100vh; */
+      /* justify-content: space-around; */
+      /* align-items: stretch; */
+      /* width: 0px;
+      height: 0px; */
+      /* visibility: hidden;
+      width: 0px;
+      height: 0px;
+      opacity: 0; */
+      /* transition: all 0.3s ease-in-out; */
+    }
+
+    .nav-links li a {
+      /* visibility: hidden;
+      width: 0px;
+      height: 0px;
+      opacity: 0; */
+      /* transition: all 0.3s ease-in-out; */
+    }
+
+    .hamburger {
+      display: block;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+</style>
+
+<script>
+
+  const service_dropDown =  document.querySelector('.services-dropdown')
+
+  
+
+  document.querySelector('.services')?.addEventListener('click', () => {
+    service_dropDown?.classList.toggle("show_services")
+  })
+
+  document.querySelector('main')?.addEventListener('click', () => {
+    if (service_dropDown?.classList.contains("show_services")) {
+      service_dropDown.classList.toggle("show_services")
+    }
+  })
+    
+</script>
