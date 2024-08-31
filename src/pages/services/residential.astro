@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="MVLandscape - Residential Services">
+    <h1>does this routing work?</h1>
+
+    <div class="content">
+        <div>this is a test</div>
+    </div>
+
+    <div>
+        <button class="btn-click">Click</button>
+    </div>
+</Layout>
+
+<style>
+    .content {
+        background: pink;
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+    .trans-test {
+        display: block;
+        width: 400px;
+        height: 40px;
+        visibility: visible;
+        transition: all .8s ease-in-out;
+        background: blue;
+    }
+</style>
+
+<script>
+    document.querySelector('.btn-click')?.addEventListener('click', () => {
+        document.querySelector('.content')?.classList.toggle('trans-test')
+    })
+</script>

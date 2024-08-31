@@ -1,0 +1,51 @@
+---
+
+---
+
+<div class="hamburger pr-5 h-9 cursor-pointer lg:hidden lg:w-0">
+    <!-- <span class="line block w-10 h-1 mb-3 bg-[#ff9776]"></span> -->
+    <span class="line block w-10 h-1 mb-3 bg-[#ff9776] data-[toggle=open]:bg-transparent before:content-[''] before:relative before:inline-block before:w-10 before:h-1 before:left-0 before:bg-[#ff9776] before:data-[toggle=open]:rotate-[-135deg] after:data-[toggle=open]:top-[-1.45rem] before:transition-all after:content-[''] after:relative after:inline-block after:w-10 after:h-1 after:top-[-9px] after:left-0 after:bg-[#ff9776] after:transition-all after:data-[toggle=open]:rotate-[135deg] transition-all"></span>
+    <!-- <span class="line block w-10 h-1 mb-3 bg-[#ff9776]"></span> -->
+</div>
+
+<style>
+    /* .hamburger {
+        padding-right: 20px;``
+        cursor: pointer;
+    } */
+
+    /* .hamburger .line {
+        display: block;
+        width: 40px;
+        height: 5px;
+        margin-bottom: 10px;
+        background-color: #ff9776;
+    } */
+
+    
+</style>
+
+<script>
+    document.querySelector('.hamburger')?.addEventListener('click', () => {
+        const nav_links = document.querySelector('.nav-links')
+        const nav_span = document.querySelector('.line');
+        const navigation_background = document.querySelector('.hamburger')
+
+        if (navigation_background?.getAttribute('data-toggle') === 'open') {
+            nav_span?.setAttribute('data-toggle', 'close')
+            navigation_background?.setAttribute('data-toggle', 'close')
+        } else {
+            nav_span?.setAttribute('data-toggle', 'open')
+            navigation_background?.setAttribute('data-toggle', 'open')
+        }
+
+
+        nav_links?.classList.toggle('show')
+        // document.querySelectorAll('.nav-links li')?.forEach((doc) => {
+        //     doc.classList.toggle('show')
+        // })
+        // document.querySelectorAll('.nav-links li a')?.forEach((doc) => {
+        //     doc.classList.toggle('show')
+        // })
+    })
+</script>
