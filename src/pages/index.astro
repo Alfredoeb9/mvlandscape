@@ -1,29 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="MVLandscape">
 	<main>
 
-		<section class="hero-section container w-full mx-auto py-[200px]">
+		<section class="hero-section container w-full mx-auto py-[200px] bg-white">
 			<!-- <div class="hero-container h-full"> -->
 				<div class="background-overlay"></div>
 
-				<div class="flex h-full items-start flex-wrap mx-auto relative">
+				<div class="flex h-full px-8 items-start flex-wrap mx-auto relative">
 
 					<div class="w-full flex items-start relative float-left">
 						<h1>WELCOME TO MVLANDSCAPE</h1>
 					</div>
 					
 
-					<div class="w-[50%] flex items-start relative float-left">
+					<div class="w-[65%] lg:w-[50%] flex items-start relative float-left">
 						<div class="hero_button_container flex pt-14 items-center content-start flex-wrap relative w-full self-stretch">
 							<div class="w-[80%] flex relative mb-20">
 								<p>Create your business, your vision, your online presence with A Geek Studio web design and web development expertise.</p>
 							</div>
 
-							<div class="flex gap-5">
+							<div class="flex gap-1">
 								<button class="bg-slate-300 rounded-lg py-3 px-5">Our Services</button>
 
 								<button class="bg-slate-300 rounded-lg py-3 px-5">Contact Us</button>
@@ -50,7 +50,7 @@ import Card from '../components/Card.astro';
 		<section class="py-9 bg-white">
 			<div class="background-overlay"></div>
 
-			<div class="container mx-auto flex flex-wrap items-center content-center justify-center">
+			<div class="container mx-auto px-8 flex flex-wrap items-center content-center justify-center">
 
 				<div class="flex gap-3 items-center content-center justify-center">
 					<div class="relative w-[40%]">
@@ -106,7 +106,21 @@ import Card from '../components/Card.astro';
 						
 					</div>
 				</div>
-				
+			</div>
+		</section>
+
+		<section class="py-9 bg-slate-200">
+			<div class="container mx-auto text-center px-8">
+				<h2 class="text-4xl font-bold lg:text-5xl pb-3">OUR SERVICES</h2>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, nulla placeat debitis enim deserunt maxime officia eaque eum! Animi expedita reprehenderit, dignissimos tempora pariatur nostrum quibusdam cupiditate alias praesentium aliquam.</p>
+			
+				<div class="flex gap-4 flex-wrap pt-5">
+					<Card title='Residential Services' body='This is our residential service that we offer to you' />
+					<Card title='Residential Services' body='This is our residential service that we offer to you' />
+					<Card title='Residential Services' body='This is our residential service that we offer to you' />
+					<Card title='Residential Services' body='This is our residential service that we offer to you' />
+				</div>
 			</div>
 		</section>
 		
