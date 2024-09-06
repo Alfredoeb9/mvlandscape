@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About">
+  <main>
+    <section class="about-section w-full mx-auto py-[200px] bg-white">
+      <div class="background-overlay"></div>
+
+      <div
+        class="container flex h-full px-8 item-start flex-wrap mx-auto relative"
+      >
+        <div class="w-full flex items-start relative">
+          <h1>About</h1>
+        </div>
+
+        <div class="w-[65%] lg:w-[50%] flex items-start relative">
+          <div
+            class="flex pt-14 items-center content-start flex-wrap relative w-full self-stretch"
+          >
+            <div class="w-[80%] flex relative mb-20">
+              <p>
+                Create your business, your vision, your online presence with A
+                Geek Studio web design and web development expertise.
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <button
+                class="bg-slate-300 rounded-lg py-3 px-5 hover:bg-slate-400 lg:hover:scale-105 transition-all"
+                >Our Services</button
+              >
+
+              <button
+                class="bg-slate-300 rounded-lg py-3 px-5 hover:bg-slate-400 lg:hover:scale-105 transition-all"
+                >Contact Us</button
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
