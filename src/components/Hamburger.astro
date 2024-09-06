@@ -13,21 +13,18 @@
     const nav_links = document.querySelector(".nav-links");
     const nav_span = document.querySelector(".line");
     const navigation_background = document.querySelector(".hamburger");
+    const services_dropdown = document.querySelector(".services-dropdown");
 
     if (navigation_background?.getAttribute("data-toggle") === "open") {
       nav_span?.setAttribute("data-toggle", "close");
       navigation_background?.setAttribute("data-toggle", "close");
+      services_dropdown?.setAttribute("data-toggle", "close");
+      services_dropdown?.classList.remove("show_services");
     } else {
       nav_span?.setAttribute("data-toggle", "open");
       navigation_background?.setAttribute("data-toggle", "open");
     }
 
     nav_links?.classList.toggle("show");
-    // document.querySelectorAll('.nav-links li')?.forEach((doc) => {
-    //     doc.classList.toggle('show')
-    // })
-    // document.querySelectorAll('.nav-links li a')?.forEach((doc) => {
-    //     doc.classList.toggle('show')
-    // })
   });
 </script>

@@ -15,7 +15,7 @@ const navigation_links = {
     <Hamburger />
 
     <ul
-      class="nav-links bg-pink-50 flex flex-col bg-pink fixed top-0 bottom-0 left-0 right-[54%] text-center items-stretch justify-around z-10 transform: translate-x-[-100%] transition ease-in-out transition-duration-[0.5s] lg:transform-none lg:flex-row lg:relative lg:bg-transparent"
+      class="nav-links bg-pink-50 flex flex-col bg-pink fixed top-0 bottom-0 left-0 right-[37%] text-center items-stretch justify-around z-10 transform: translate-x-[-100%] transition ease-in-out transition-duration-[0.5s] lg:transform-none lg:flex-row lg:relative lg:bg-transparent"
     >
       <li class="hover:bg-slate-200">
         <a class="inline-block p-[calc(100vh/8)] lg:p-5" href="/">Home</a>
@@ -59,7 +59,7 @@ const navigation_links = {
   }
 
   .show_services {
-    display: block !important;
+    display: block;
   }
 
   @media screen and (max-width: 636px) {
@@ -79,7 +79,7 @@ const navigation_links = {
 
   document.querySelector("main")?.addEventListener("click", () => {
     if (service_dropDown?.classList.contains("show_services")) {
-      service_dropDown.classList.toggle("show_services");
+      service_dropDown.classList.remove("show_services");
     }
   });
 </script>
