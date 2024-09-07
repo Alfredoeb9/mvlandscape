@@ -10,16 +10,21 @@
 
 <script>
   document.querySelector(".hamburger")?.addEventListener("click", () => {
+    const body = document.querySelector("body");
     const nav_links = document.querySelector(".nav-links");
     const nav_span = document.querySelector(".line");
     const navigation_background = document.querySelector(".hamburger");
     const services_dropdown = document.querySelector(".services-dropdown");
 
     if (navigation_background?.getAttribute("data-toggle") === "open") {
+      if (body !== null) body.style.overflowY = "scroll";
+
       nav_span?.setAttribute("data-toggle", "close");
       navigation_background?.setAttribute("data-toggle", "close");
       services_dropdown?.classList.remove("show_services");
     } else {
+      if (body !== null) body.style.overflowY = "hidden";
+
       nav_span?.setAttribute("data-toggle", "open");
       navigation_background?.setAttribute("data-toggle", "open");
     }
