@@ -1,17 +1,142 @@
 ---
+import Card from "../../components/Card.astro";
+import Contact from "../../components/Contact.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="MVLandscape - Residential Services">
-  <h1>does this routing work?</h1>
+  <main class="bg-white">
+    <section class="hero-section w-full mx-auto py-[200px] bg-white">
+      <div class="background-overlay"></div>
 
-  <div class="content">
-    <div>this is a test</div>
-  </div>
+      <div
+        class="container flex h-full px-8 items-start flex-wrap mx-auto relative"
+      >
+        <div class="w-full flex items-start relative float-left">
+          <h1 class="text-4xl font-bold">Residential Services</h1>
+        </div>
 
-  <div>
-    <button class="btn-click">Click</button>
-  </div>
+        <div class="w-[85%] lg:w-[50%] flex items-start relative float-left">
+          <div
+            class="hero_button_container flex pt-14 items-center content-start flex-wrap relative w-full self-stretch"
+          >
+            <div class="w-[80%] flex relative mb-20">
+              <p>
+                We offer a variety of residential services to help you maintain
+                your outdoor space. Our team of professionals are passionate
+                about creating beautiful outdoor spaces.
+              </p>
+            </div>
+
+            <div class="flex gap-3">
+              <button
+                class="bg-slate-300 rounded-lg py-3 px-5 hover:bg-slate-400 lg:hover:scale-105 transition-all"
+                >Our Services</button
+              >
+
+              <button
+                class="bg-slate-300 rounded-lg py-3 px-5 hover:bg-slate-400 lg:hover:scale-105 transition-all"
+                >Contact Us</button
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container mx-auto">
+      <section class="bg-white">
+        <div
+          class="flex flex-col-reverse flex-wrap lg:flex-row lg:flex-nowrap mx-auto"
+        >
+          <div class="mx-auto py-14 px-20 lg:w-[50%] lg:px-0">
+            <h2 class="text-3xl font-bold pb-5">
+              Your Professional Garden Landscaping Team
+            </h2>
+
+            <p class="mb-4 pr-10">
+              We are happy to help you perfect your project no matter where you
+              are in the landscaping process. Some of our clients start with a
+              blank slate and little idea of what they want in a final product.
+              Others know exactly what they want. Our job is to take you from an
+              idea to a fully realized project as seamlessly as possible.
+              Sometimes clients just need some minor changes made to an existing
+              project. We are available no matter where you're at in the
+              process.
+            </p>
+
+            <button
+              class="inline-block font-bold cursor-pointer rounded-full bg-[#dfaf4b] px-4 py-3"
+              >WORK WITH US</button
+            >
+          </div>
+
+          <div class="lg:w-[45%]">
+            <img
+              src="/img/residential-services.jpg"
+              alt="Residential Services"
+              class="w-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto py-14 px-20 lg:w-full">
+          <h2 class="text-3xl font-bold pb-5">Our Residential Services</h2>
+
+          <p class="mb-4 pr-10">
+            We offer a variety of residential services to help you maintain your
+            outdoor space. Our team of professionals are passionate about
+            creating beautiful outdoor spaces. We offer the following services:
+          </p>
+
+          <div class="flex gap-4 flex-wrap pt-5">
+            <Card
+              title="Landscaping Design"
+              body="We offer a unique landscaping experience"
+            />
+            <Card
+              title="Planting"
+              body="We offer a unique planting experience"
+            />
+            <Card
+              title="Tree Trimming"
+              body="We offer a unique tree trimming experience"
+            />
+            <Card
+              title="Grass Cutting"
+              body="We offer a unique grass cutting experience"
+            />
+            <Card
+              title="Outdoor Lighting"
+              body="We offer a unique outdoor lighting experience"
+            />
+            <Card title="And More!" body="We offer a unique experience" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto py-14 px-20 lg:w-full lg:px-0">
+          <h2 class="text-3xl font-bold pb-5 text-center">Why Choose Us?</h2>
+
+          <p>
+            We are a team of professionals who are passionate about creating
+            beautiful outdoor spaces. We take pride in our work and strive to
+            exceed our clients' expectations. We are committed to providing
+            exceptional service and quality workmanship. When you choose us, you
+            can trust that your project will be completed on time and within
+            budget. Contact us today to learn more about our residential
+            services and how we can help you create the outdoor space of your
+            dreams.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <Contact />
+  </main>
 </Layout>
 
 <style>
