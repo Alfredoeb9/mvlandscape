@@ -1,4 +1,5 @@
 ---
+import Banner from "../components/Banner.astro";
 import Card from "../components/Card.astro";
 import Contact from "../components/ContactForm.astro";
 import Layout from "../layouts/Layout.astro";
@@ -46,15 +47,9 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="bg-pink-200">
-      <div class="background-overlay"></div>
+    <Banner />
 
-      <div class="flex flex-wrap items-center content-center justify-center">
-        <p class="text-center text-4xl font-bold py-2">INVEST IN YOUR FUTURE</p>
-      </div>
-    </section>
-
-    <section class="py-9 bg-white">
+    <section class="py-9 bg-primary">
       <div class="background-overlay"></div>
 
       <div
@@ -63,17 +58,17 @@ import Layout from "../layouts/Layout.astro";
         <div class="flex gap-3 items-center content-center justify-center">
           <div class="relative w-[40%]">
             <div
-              class="absolute inline-block w-1 h-[80px] bg-black top-[-6.5rem]"
+              class="absolute inline-block w-1 h-[80px] bg-white top-[-6.5rem]"
             >
             </div>
             <div class="flex relative">
               <div
-                class="absolute inline-block w-10 h-10 rounded-full top-[-0.5rem] left-[-1rem] opacity-55 z-10 bg-[#ff9776]"
+                class="absolute inline-block w-10 h-10 rounded-full top-[-0.5rem] left-[-1rem] opacity-55 z-10 bg-slate-300"
               >
               </div>
-              <span class="font-bold">1.</span>
+              <span class="font-bold text-white">1.</span>
 
-              <div class="ml-5">
+              <div class="ml-5 text-white">
                 <h2>WHO WE ARE?</h2>
                 <div>
                   <h2 class="text-lg font-bold pb-3">LOREM IPSUM</h2>
@@ -91,12 +86,12 @@ import Layout from "../layouts/Layout.astro";
           <div class="w-[55%] relative">
             <div class="flex relative mb-10">
               <div
-                class="absolute inline-block w-10 h-10 rounded-full top-[-0.5rem] left-[-1rem] opacity-55 z-10 bg-[#ff9776]"
+                class="absolute inline-block w-10 h-10 rounded-full top-[-0.5rem] left-[-1rem] opacity-55 z-10 bg-slate-300"
               >
               </div>
-              <span class="font-bold">2.</span>
+              <span class="font-bold text-white">2.</span>
 
-              <div class="ml-5">
+              <div class="ml-5 text-white">
                 <h2>COMPANY</h2>
                 <div>
                   <h2 class="text-lg font-bold pb-3">SPECIALIZATION</h2>
@@ -112,16 +107,16 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="flex relative">
               <div
-                class="absolute inline-block w-1 h-[220px] bg-black top-[-16rem] md:top-[-14rem] md:h-[200px] lg:h-[100px] lg:top-[-8rem]"
+                class="absolute inline-block w-1 h-[220px] bg-white top-[-16rem] md:top-[-14rem] md:h-[200px] lg:h-[100px] lg:top-[-8rem]"
               >
               </div>
               <div
-                class="absolute inline-block w-10 h-10 rounded-full top-[-0.5rem] left-[-1rem] opacity-55 z-10 bg-[#ff9776]"
+                class="absolute inline-block w-10 h-10 rounded-full top-[-0.5rem] left-[-1rem] opacity-55 z-10 bg-slate-300"
               >
               </div>
-              <span class="font-bold">3.</span>
+              <span class="font-bold text-white">3.</span>
 
-              <div class="ml-5">
+              <div class="ml-5 text-white">
                 <h2>COMPANY</h2>
                 <div>
                   <h2 class="text-lg font-bold pb-3">SPECIALIZATION</h2>
@@ -139,11 +134,11 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="py-9 bg-slate-200">
+    <section class="py-9 bg-white">
       <div class="container mx-auto text-center px-8">
         <h2 class="text-4xl font-bold lg:text-5xl pb-3">OUR SERVICES</h2>
 
-        <p class="w-full md:w-[75%] lg:w-[55%] mx-auto">
+        <p class="w-full md:w-[75%] lg:w-[75%] mx-auto">
           At <span class="font-bold">MVLandscape</span>, we offer expert
           landscaping solutions to transform your outdoor space. From creative
           design and garden maintenance to hardscaping and irrigation, our
@@ -192,13 +187,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="bg-pink-200">
-      <div class="background-overlay"></div>
-
-      <div class="flex flex-wrap items-center content-center justify-center">
-        <p class="text-center text-4xl font-bold py-2">INVEST IN YOUR FUTURE</p>
-      </div>
-    </section>
+    <Banner />
 
     <Contact />
   </main>
