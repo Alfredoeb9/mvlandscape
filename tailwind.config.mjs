@@ -6,6 +6,9 @@ export default {
       backgroundColor: {
         primary: "#45a342",
       },
+      backgroundImage: {
+        "hero-section": "url('src/assets/img/hero-section-home.jpg')",
+      },
     },
   },
   plugins: [],
