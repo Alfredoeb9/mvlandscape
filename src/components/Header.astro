@@ -6,43 +6,50 @@ const navigation_links = {
 };
 ---
 
-<header class="header-navigation bg-white w-full top-0 right-0 fixed z-10">
+<header class="header-navigation bg-[#C19A6B] w-full top-0 right-0 fixed z-10">
   <nav class="nav flex flex-row justify-between items-center text-black p-5">
     <div>
-      <a href="/">MVLandscape</a>
+      <a href="/" class="text-white">MVLandscape</a>
     </div>
 
     <Hamburger />
 
     <ul
-      class="nav-links bg-pink-50 flex flex-col bg-pink fixed top-0 bottom-0 left-0 right-[37%] text-center items-stretch justify-around z-10 transform: translate-x-[-100%] transition ease-in-out transition-duration-[0.5s] lg:transform-none lg:flex-row lg:relative lg:bg-transparent"
+      class="nav-links flex flex-col bg-[#C19A6B] text-white fixed top-0 bottom-0 left-0 right-[37%] text-center items-stretch justify-around z-10 transform: translate-x-[-100%] transition ease-in-out transition-duration-[0.5s] lg:transform-none lg:flex-row lg:relative lg:bg-transparent"
     >
-      <li class="hover:bg-slate-200">
-        <a class="inline-block p-[calc(100vh/9)] lg:p-5" href="/">Home</a>
+      <li class="hover:bg-[#c49459]">
+        <a
+          class="inline-block text-4xl lg:text-lg p-[calc(100vh/9)] lg:p-5"
+          href="/">Home</a
+        >
       </li>
-      <li class="hover:bg-slate-200">
-        <a class="inline-block p-[calc(100vh/9)] lg:p-5" href="/about">About</a>
+      <li class="hover:bg-[#c49459]">
+        <a
+          class="inline-block text-4xl lg:text-lg p-[calc(100vh/9)] lg:p-5"
+          href="/about">About</a
+        >
       </li>
       <li
-        class="services inline-block p-[calc(100vh/9)] lg:p-5 hover:bg-slate-200 hover:cursor-pointer"
+        class="services inline-block p-[calc(100vh/9)] lg:p-5 hover:bg-[#c49459] hover:cursor-pointer"
       >
-        Services
+        <span class="text-4xl lg:text-lg">Services</span>
         <ul
-          class="services-dropdown hidden absolute bg-pink-50 min-w-[135px] right-[-125px] z-[1] transition ease-in-out transition-duration-[0.5s] lg:right-[-19px] lg:bg-slate-50 lg:top-[64px]"
+          class="services-dropdown hidden absolute bg-[#c49459] min-w-[135px] right-[-125px] z-[1] transition ease-in-out transition-duration-[0.5s] lg:right-[48px] lg:bg-[#c49459] lg:top-[64px]"
         >
           <a
-            class="text-black py-3 px-4 block hover:bg-[#ddd]"
+            class="text-white py-3 px-4 block hover:bg-[#ddd] hover:text-black"
             href="/services/residential">Residential Services</a
           >
           <a
-            class="text-black py-3 px-4 block hover:bg-[#ddd]"
+            class="text-white py-3 px-4 block hover:bg-[#ddd] hover:text-black"
             href="/services/commerical">Commerical Services</a
           >
         </ul>
       </li>
-      <li class="hover:bg-slate-200">
-        <a href="/contact" class="inline-block p-[calc(100vh/9)] lg:p-5"
-          >Contact Us</a
+      <li class="hover:bg-[#c49459]">
+        <a
+          href="/contact"
+          class="inline-block text-4xl lg:text-lg p-[90px] lg:p-5">Contact Us</a
         >
       </li>
     </ul>
