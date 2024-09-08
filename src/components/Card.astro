@@ -13,9 +13,11 @@ const { title, body, img, imgAlt } = Astro.props;
   class="card max-w-[300px] w-full flex p-[1px] mx-auto bg-[#45a342] rounded-lg lg:hover:scale-[1.02] md:w-[48%] hover:cursor-pointer"
 >
   <div class="py-2 px-2">
-    <h3 class="text-white font-semibold">{title}</h3>
-    {img && <img src={img} alt={imgAlt} />}
-    <p class="text-white">{body}</p>
+    <h3 class="text-white font-semibold text-center text-2xl">
+      {title}
+    </h3>
+    {img && <img src={img} alt={imgAlt} class="h-40 w-full pt-3" />}
+    <p class="text-white pt-3">{body}</p>
   </div>
 </div>
 
