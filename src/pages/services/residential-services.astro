@@ -2,7 +2,11 @@
 import Card from "../../components/Card.astro";
 import Contact from "../../components/ContactForm.astro";
 import Layout from "../../layouts/Layout.astro";
-import plantingService from "../../assets/planting-service.jpg";
+import mvlandscape from "../../assets/img/mvlandscape.jpg";
+import plantingService from "../../assets/img/planting-service.jpg";
+import landscapeDesign from "../../assets/img/landscape-design.jpg";
+import trimmingService from "../../assets/img/tree-trimming.jpg";
+import mowingService from "../../assets/img/mowing-and-edging.jpg";
 ---
 
 <Layout title="MVLandscape - Residential Services">
@@ -71,7 +75,7 @@ import plantingService from "../../assets/planting-service.jpg";
 
           <div class="lg:w-[45%]">
             <img
-              src="/src/assets/img/mvlandscape.jpg"
+              src={mvlandscape.src}
               alt="Residential Services"
               class="mx-auto"
             />
@@ -93,25 +97,25 @@ import plantingService from "../../assets/planting-service.jpg";
             <Card
               title="Landscaping Design"
               body="We offer a unique landscaping experience"
-              img="/src/assets/img/landscape-design.jpg"
+              img={landscapeDesign.src}
               imgAlt="Image of MVLandscape employee designing a landscape for a home"
             />
             <Card
               title="Planting"
               body="We offer a unique planting experience"
-              img="/src/assets/img/planting-service.jpg"
+              img={plantingService.src}
               imgAlt="Image of MVLandscape employee planting flowers in the front yard of a home"
             />
             <Card
               title="Tree Trimming"
               body="We offer a unique tree trimming experience"
-              img="/src/assets/img/tree-trimming.jpg"
+              img={trimmingService.src}
               imgAlt="Image of MVLandscape employee trimming a tree in a front yard"
             />
             <Card
               title="Grass Cutting"
               body="We offer a unique grass cutting experience"
-              img="/src/assets/img/mowing-and-edging.jpg"
+              img={mowingService.src}
               imgAlt="Image of MVLandscape employee mowing and edging a lawn"
             />
             <Card
