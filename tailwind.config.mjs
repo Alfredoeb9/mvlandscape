@@ -8,6 +8,7 @@ export default {
       },
       backgroundImage: {
         "hero-section": "url('src/assets/img/hero-section-home.jpg')",
+        "residential-hero": "url('../src/assets/img/residential-services.jpg')",
         "planting-service": "url('src/assets/img/planting-service.jpg')",
       },
     },
