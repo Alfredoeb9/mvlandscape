@@ -5,6 +5,15 @@ export default {
     extend: {
       backgroundColor: {
         primary: "#45a342",
+        banner: "#C19A6B",
+        cafe: "#C19A6B",
+        darker_cafe: "#A98151",
+      },
+      textColor: {
+        primary: "#45a342",
+        banner: "#C19A6B",
+        cafe: "#C19A6B",
+        darker_cafe: "#A98151",
       },
       backgroundImage: {
         "hero-section": "url('src/assets/img/hero-section-home.jpg')",
