@@ -25,17 +25,17 @@ if(isset($_POST['submit'])) {
             //Server settings
         $mail->SMTPDebug = 2;                                       // Enable verbose debug output
         $mail->isSMTP();                                            // Set mailer to use SMTP
-        $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+        $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $mail->Username   = 'alfredoeb96@gmail.com';                     // SMTP username
-        $mail->Password   = 'yrhvyqsagezucwch';                               // SMTP password
+        $mail->Username   = $_ENV["EMAIL_HANDLE"];                  // SMTP username
+        $mail->Password   = $_ENV["EMAIL_PWD"].;                    // SMTP password
         $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, [ICODE]ssl[/ICODE] also accepted
-        $mail->Port       = 587;                                    // TCP port to connect to
+        $mail->Port       = $_ENV["EMAIL_PORT"];                    // TCP port to connect to
 
         //Recipients
         $mail->setFrom("test@gmail.com", 'Mailer');
         $mail->addReplyTo('alfredoeb96@gmail.com', 'Information');
-        $mail->addCC('cc@example.com');                             // This is needed for production
+        $mail->addCC('alfredoeb96@gmail.com');                             // This is needed for production
         //$mail->addBCC('bcc@example.com');
 
         // Attachments
