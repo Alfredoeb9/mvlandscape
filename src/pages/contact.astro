@@ -1,13 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ContactForm from "../components/ContactForm.astro";
 ---
 
 <Layout title="MVLandscape - Contact Us">
   <main class="bg-white">
     <div class="relative mx-auto">
-      <div class="background-overlay"></div>
-
       <div class="section-wrapper mx-auto w-full">
         <section
           class="px-4 pt-20 pb-5 container mx-auto lg:max-w-[66.6%] lg:pt-28"
@@ -21,7 +18,7 @@ import ContactForm from "../components/ContactForm.astro";
 
         <section class="bg-white dark:bg-gray-900">
           <div class="py-8 lg:py-16 px-4 mx-auto lg:max-w-[66%]">
-            <form action="#" class="space-y-8">
+            <form action="contactform.php" method="post" class="space-y-8">
               <div>
                 <label
                   for="email"
@@ -31,6 +28,7 @@ import ContactForm from "../components/ContactForm.astro";
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                   placeholder="name@mvlandscape.net"
                   required
@@ -45,6 +43,7 @@ import ContactForm from "../components/ContactForm.astro";
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
                   class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                   placeholder="Let us know how we can help you"
                   required
@@ -58,12 +57,14 @@ import ContactForm from "../components/ContactForm.astro";
                 >
                 <textarea
                   id="message"
+                  name="message"
                   rows="6"
                   class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Leave a comment..."></textarea>
+                  placeholder="Leave a message..."></textarea>
               </div>
               <button
                 type="submit"
+                name="submit"
                 class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >Send message</button
               >
