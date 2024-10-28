@@ -3,6 +3,10 @@ import Banner from "../components/Banner.astro";
 import Card from "../components/Card.astro";
 import Contact from "../components/ContactForm.astro";
 import Layout from "../layouts/Layout.astro";
+import planting_flowers from "../assets/img/residential-services.jpg";
+import portfolio2 from "../assets/img/mvlandscape_portfolio_2.png";
+import portfolio3 from "../assets/img/mvlandscape_portfolio_3.jpg";
+import { Image } from "astro:assets";
 // import hero from "../assets/img/hero-section-home.jpg"
 ---
 
@@ -181,13 +185,13 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="grid grid-cols-1 justify-items-center self-center place-content-center gap-y-2 gap-x-2 md:grid-cols-2 lg:grid-cols-[150px_minmax(300px,250px)_150px]"
         >
-          <img src="https://via.placeholder.com/200" alt="portfolio" />
-          <img src="https://via.placeholder.com/300x200" alt="portfolio" />
-          <img src="https://via.placeholder.com/150" alt="portfolio" />
+          <Image src={planting_flowers} alt="portfolio" />
+          <Image src={portfolio2} alt="portfolio" />
+          <Image src={portfolio3} alt="portfolio" />
 
-          <img src="https://via.placeholder.com/200" alt="portfolio" />
-          <img src="https://via.placeholder.com/300x200" alt="portfolio" />
-          <img src="https://via.placeholder.com/150" alt="portfolio" />
+          <Image src={planting_flowers} alt="portfolio" />
+          <Image src={portfolio2} alt="portfolio" />
+          <Image src={portfolio3} alt="portfolio" />
         </div>
       </div>
     </section>
