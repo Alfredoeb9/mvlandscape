@@ -35,8 +35,9 @@ if(isset($_POST['submit'])) {
 
         //Recipients
         $mail->setFrom("support@mvlandscape.net", 'Mvlandscape');
-        $mail->addReplyTo('alfredoeb96@gmail.com', 'Information');
-        $mail->addCC('alfredoeb96@gmail.com');                             // This is needed for production
+        $mail->addAddress($mailFrom);
+        $mail->addReplyTo('support@mvlandscape.net', 'Information');
+        $mail->addCC('support@mvlandscape.net');                             // This is needed for production
         //$mail->addBCC('bcc@example.com');
 
         // Attachments

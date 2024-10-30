@@ -13,7 +13,7 @@ import { Image } from "astro:assets";
 <Layout title="MVLandscape">
   <main>
     <section
-      class="hero-section relative w-full mx-auto py-[200px] bg-hero-section bg-center bg-no-repeat bg-cover"
+      class="hero-section relative w-full mx-auto py-[130px] bg-hero-section bg-center bg-no-repeat bg-cover lg:py-[200px]"
     >
       <div class="background-overlay"></div>
 
@@ -24,12 +24,12 @@ import { Image } from "astro:assets";
           <h1 class="text-5xl lg:text-6xl font-bold">WELCOME TO MVLANDSCAPE</h1>
         </div>
 
-        <div class="w-[65%] lg:w-[50%] flex items-start relative float-left">
+        <div class="w-[85%] lg:w-[70%] flex items-start relative float-left">
           <div
             class="hero_button_container flex pt-14 items-center content-start flex-wrap relative w-full self-stretch"
           >
-            <div class="w-full lg:w-[80%] flex relative mb-20">
-              <p class="bg-slate-50 bg-opacity-30 font-semibold">
+            <div class="w-full md:w-[80%] lg:w-[90%] flex relative mb-20">
+              <p class="bg-slate-50 bg-opacity-30 font-semibold md:p-3">
                 Welcome to MVLandscape, we turn your landscaping dreams into
                 stunning realities. Our skilled team designs and creates
                 beautiful, functional outdoor spaces tailored to your vision.
@@ -40,7 +40,7 @@ import { Image } from "astro:assets";
 
             <div class="flex gap-3">
               <a
-                href="/services/residential-services"
+                href="#services"
                 class="bg-cafe font-semibold rounded-lg py-3 px-5 hover:bg-darker_cafe lg:hover:scale-105 transition-all"
                 >Our Services</a
               >
@@ -143,11 +143,11 @@ import { Image } from "astro:assets";
       </div>
     </section>
 
-    <section class="py-9 bg-white">
+    <section class="py-9 bg-white lg:py-12" id="services">
       <div class="container mx-auto text-center px-8">
         <h2 class="text-4xl font-bold lg:text-5xl pb-3">OUR SERVICES</h2>
 
-        <p class="w-full md:w-[75%] lg:w-[75%] mx-auto">
+        <p class="w-full md:w-[75%] lg:w-[75%] mx-auto lg:py-4">
           At <span class="font-bold">MVLandscape</span>, we offer expert
           landscaping solutions to transform your outdoor space. From creative
           design and garden maintenance to hardscaping and irrigation, our
@@ -157,22 +157,43 @@ import { Image } from "astro:assets";
           can enhance your outdoor environment.
         </p>
 
-        <div class="flex gap-4 flex-wrap pt-5">
+        <div class="flex gap-6 flex-wrap pt-5 lg:gap-4 md:gap-y-7 lg:gap-y-11">
           <Card
-            title="Residential Services"
-            body="This is our residential service that we offer to you"
+            title="GRASS CUTTING SERVICE"
+            body="Expert grass cutting for a pristine, well-maintained lawn year-round."
+            link="/services/grass-cutting"
+            isService
           />
           <Card
-            title="Residential Services"
-            body="This is our residential service that we offer to you"
+            title="LANDSCAPE DESIGN SERVICE"
+            body="Transform your outdoor space with our expert landscape design service."
+            link="/services/landscape-design"
+            isService
           />
           <Card
-            title="Residential Services"
-            body="This is our residential service that we offer to you"
+            title="PLANTING SERVICE"
+            body="Enhance your garden with our professional planting service."
+            link="/services/planting"
+            isService
           />
           <Card
-            title="Residential Services"
-            body="This is our residential service that we offer to you"
+            title="TREE TRIMMING SERVICE"
+            body="Professional tree trimming for healthy, beautiful, and safe trees."
+            link="/services/tree-trimming"
+            isService
+          />
+          <Card
+            title="SPRINKLER INSTALLATION SERVICE"
+            body="Efficient sprinkler installation for a lush, well-watered landscape."
+            link="/services/sprinkler-installation"
+            isService
+          />
+
+          <Card
+            title="CLEAN UP SERVICE"
+            body="Thorough clean-up service to keep your outdoor space neat and tidy."
+            link="/services/clean-up"
+            isService
           />
         </div>
       </div>
@@ -185,13 +206,23 @@ import { Image } from "astro:assets";
         <div
           class="grid grid-cols-1 justify-items-center self-center place-content-center gap-y-2 gap-x-2 md:grid-cols-2 lg:grid-cols-[150px_minmax(300px,250px)_150px]"
         >
-          <Image src={planting_flowers} alt="portfolio" />
-          <Image src={portfolio2} alt="portfolio" />
-          <Image src={portfolio3} alt="portfolio" />
+          <Image
+            src={planting_flowers}
+            alt="portfolio"
+            width={200}
+            height={200}
+          />
+          <Image src={portfolio2} alt="portfolio" width={300} height={200} />
+          <Image src={portfolio3} alt="portfolio" width={150} height={150} />
 
-          <Image src={planting_flowers} alt="portfolio" />
-          <Image src={portfolio2} alt="portfolio" />
-          <Image src={portfolio3} alt="portfolio" />
+          <Image
+            src={planting_flowers}
+            alt="portfolio"
+            width={200}
+            height={200}
+          />
+          <Image src={portfolio2} alt="portfolio" width={300} height={200} />
+          <Image src={portfolio3} alt="portfolio" width={150} height={150} />
         </div>
       </div>
     </section>
@@ -203,15 +234,6 @@ import { Image } from "astro:assets";
 </Layout>
 
 <style>
-  main {
-    /* margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6; */
-  }
   .astro-a {
     position: absolute;
     top: -32px;
@@ -220,21 +242,6 @@ import { Image } from "astro:assets";
     width: 220px;
     height: auto;
     z-index: -1;
-  }
-  /* h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  } */
-  .background-overlay {
-    /* width: 100%;
-		height: 100%;
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		left: 0; */
   }
   .section-wrapper {
     position: relative;
@@ -245,26 +252,5 @@ import { Image } from "astro:assets";
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
-  }
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  .instructions code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent-light));
   }
 </style>
