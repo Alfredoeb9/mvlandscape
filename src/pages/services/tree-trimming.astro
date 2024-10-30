@@ -3,13 +3,13 @@ import Banner from "../../components/Banner.astro";
 import Card from "../../components/Card.astro";
 import Contact from "../../components/ContactForm.astro";
 import Layout from "../../layouts/Layout.astro";
-// import windowWashing from "../../assets/img/window-power-wash-1.jpg";
+import treeTrimmingImage from "../../assets/img/tree_trimming_service.jpg";
 ---
 
 <Layout title="MVLandscape - Tree Trimming Service">
   <main class="bg-white">
     <section
-      class="hero-section relative w-full mx-auto py-[200px] bg-window-hero bg-center bg-no-repeat bg-cover"
+      class="hero-section relative w-full mx-auto py-[200px] bg-tree-service-hero bg-center bg-no-repeat bg-cover"
     >
       <div class="background-overlay"></div>
 
@@ -57,7 +57,7 @@ import Layout from "../../layouts/Layout.astro";
             class="flex flex-col-reverse flex-wrap lg:flex-row lg:flex-nowrap mx-auto"
           >
             <div class="mx-auto py-12 px-16 lg:w-[50%] lg:px-0">
-              <h2 class="text-3xl font-bold pb-5 text-white">
+              <h2 class="text-3xl font-bold pb-5 text-black">
                 Your Professional Landscaping Team
               </h2>
 
@@ -72,17 +72,17 @@ import Layout from "../../layouts/Layout.astro";
               </p>
 
               <button
-                class="inline-block font-bold cursor-pointer rounded-full bg-pastelRed px-4 py-3"
+                class="inline-block font-bold cursor-pointer rounded-full bg-cafe px-4 py-3"
                 ><a href="/contact">WORK WITH US</a></button
               >
             </div>
 
             <div class="lg:w-[45%]">
-              <!-- <img
-                src={windowWashing.src}
+              <img
+                src={treeTrimmingImage.src}
                 alt="A man power washing the windows of a house"
                 class="mx-auto p-4 lg:p-0"
-              /> -->
+              />
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@ import Layout from "../../layouts/Layout.astro";
 
       <section class="py-10">
         <div class="container mx-auto">
-          <div class="mx-auto py-14 px-20 lg:w-[960px] lg:px-0">
+          <div class="mx-auto py-14 px-20 lg:w-full">
             <h2 class="text-3xl font-bold pb-5">OUR TREE TRIMMING SERVICE</h2>
 
             <p class="mb-4 lg:pr-20">
