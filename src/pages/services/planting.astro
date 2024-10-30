@@ -4,6 +4,7 @@ import Card from "../../components/Card.astro";
 import Contact from "../../components/ContactForm.astro";
 import Layout from "../../layouts/Layout.astro";
 import plantImage from "../../assets/img/planting_services.jpg";
+import Image from "astro/components/Image.astro";
 ---
 
 <Layout title="MVLandscape - Planting Service">
@@ -77,9 +78,9 @@ import plantImage from "../../assets/img/planting_services.jpg";
             </div>
 
             <div class="lg:w-[45%]">
-              <img
-                src={plantImage.src}
-                alt="A man power washing a house"
+              <Image
+                src={plantImage}
+                alt="MVLandscape planting service"
                 class="mx-auto p-4 lg:p-0"
               />
             </div>
