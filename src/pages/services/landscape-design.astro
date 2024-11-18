@@ -2,13 +2,17 @@
 import Banner from "../../components/Banner.astro";
 import Contact from "../../components/ContactForm.astro";
 import Layout from "../../layouts/Layout.astro";
-// import gutterService from "../../assets/img/gutter-cleaning-1.jpg";
+import landscapeDesign from "../../assets/img/landscape-design.jpg";
+import { Image } from "astro:assets";
 ---
 
-<Layout title="MVLandscape - Landscape Design Service">
+<Layout
+  title="MVLandscape - Landscape Design Service"
+  description="MVLandscape offers expert landscape design services to transform your outdoor space into a stunning and functional environment. Our team works closely with you to create a unique design that enhances the beauty and value of your property. Contact us to bring your vision to life with our professional landscape design services."
+>
   <main class="bg-white">
     <section
-      class="hero-section relative w-full mx-auto py-[200px] bg-gutter-hero bg-center bg-no-repeat bg-cover"
+      class="hero-section relative w-full mx-auto py-[200px] bg-landscape-design utter-hero bg-center bg-no-repeat bg-cover"
     >
       <div class="background-overlay"></div>
 
@@ -76,17 +80,17 @@ import Layout from "../../layouts/Layout.astro";
             </div>
 
             <div class="lg:w-[45%]">
-              <!-- <img
-                src={concreteService.src}
-                alt="A man power washing a concrete driveway"
-                class="mx-auto p-4 lg:p-0"
-              /> -->
+              <Image
+                src={landscapeDesign}
+                alt="Drawing of a landscape design"
+                class="h-full w-full mx-auto p-4 lg:p-0"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="py-10">
+      <section class="py-10 bg-slate-200">
         <div class="container mx-auto">
           <div class="mx-auto py-14 px-20 lg:w-full">
             <h2 class="text-3xl font-bold pb-5">
@@ -131,7 +135,7 @@ import Layout from "../../layouts/Layout.astro";
 
             <button
               class="inline-block font-bold cursor-pointer rounded-full bg-cafe px-4 py-3 lg:block lg:mx-auto"
-              ><a href="/contact">WORK WITH US</a></button
+              ><a href="/contact">CONTACT US</a></button
             >
           </div>
         </div>

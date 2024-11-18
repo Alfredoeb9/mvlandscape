@@ -10,10 +10,12 @@ import portfolio4 from "../assets/img/mowing-and-edging.jpg";
 import portfolio5 from "../assets/img/planting_services.jpg";
 import portfolio6 from "../assets/img/tree-trimming.jpg";
 import { Image } from "astro:assets";
-// import hero from "../assets/img/hero-section-home.jpg"
 ---
 
-<Layout title="MVLandscape">
+<Layout
+  title="MVLandscape - #1 landscape company"
+  description="#1 professional landscape company offering design, installation, and maintenance services to create beautiful outdoor spaces."
+>
   <main>
     <section
       class="hero-section relative w-full mx-auto py-[130px] bg-hero-section bg-center bg-no-repeat bg-cover lg:py-[200px]"
@@ -162,9 +164,9 @@ import { Image } from "astro:assets";
 
         <div class="flex gap-6 flex-wrap pt-5 lg:gap-4 md:gap-y-7 lg:gap-y-11">
           <Card
-            title="GRASS CUTTING SERVICE"
+            title="MOW AND EDGE SERVICE"
             body="Expert grass cutting for a pristine, well-maintained lawn year-round."
-            link="/services/grass-cutting"
+            link="/services/mow-and-edge"
             isService
           />
           <Card

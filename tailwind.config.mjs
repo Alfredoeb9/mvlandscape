@@ -23,6 +23,7 @@ export default {
         "grass-cutting": "url('/src/assets/img/mow-edge.jpg')",
         "planting-service-hero": "url('/src/assets/img/planting_services.jpg')",
         "tree-service-hero": "url('/src/assets/img/tree_trimming_service.jpg')",
+        "landscape-design": "url('/src/assets/img/landscape-design.jpg')",
       },
     },
   },
