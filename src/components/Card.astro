@@ -53,18 +53,31 @@ const { title, body, img, imgAlt, link, isService } = Astro.props;
         )}
       </div>
     ) : (
-      <div class="pt-3 pb-6 px-2">
-        <h3 class="text-black font-semibold text-center text-2xl pb-3">
+      <div class="pt-3 pb-6 px-2" itemscope itemtype="https://schema.org/Thing">
+        <h3
+          class="text-black font-semibold text-center text-2xl pb-3"
+          itemprop="name"
+        >
           {title}
         </h3>
         <hr />
-        {img && <img src={img} alt={imgAlt} class="h-40 w-full pt-3" />}
-        <p class="text-black py-3 mb-4">{body}</p>
+        {img && (
+          <img
+            src={img}
+            alt={imgAlt}
+            class="h-40 w-full pt-3"
+            itemprop="image"
+          />
+        )}
+        <p class="text-black py-3 mb-4" itemprop="description">
+          {body}
+        </p>
 
         {link && (
           <a
             href={link}
             class="bg-blue-400 text-white px-2 py-3 font-semibold rounded-2xl"
+            itemprop="url"
           >
             Learn More
           </a>
