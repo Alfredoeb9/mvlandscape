@@ -13,7 +13,10 @@ import Image from "astro/components/Image.astro";
 >
   <main class="bg-white">
     <section
-      class="hero-section relative w-full mx-auto py-[200px] bg-grass-cutting bg-center bg-no-repeat bg-cover"
+      class="hero-section relative w-full mx-auto py-[200px] bg-center bg-no-repeat bg-cover"
+      style={{
+        backgroundImage: `url(${mowandedge.src})`,
+      }}
     >
       <div class="background-overlay"></div>
 

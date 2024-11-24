@@ -1,8 +1,11 @@
 ---
+import { Image } from "astro:assets";
 import Banner from "../../components/Banner.astro";
 import Card from "../../components/Card.astro";
 import Contact from "../../components/ContactForm.astro";
 import Layout from "../../layouts/Layout.astro";
+import SprinklerInstallationImage from "../../assets/img/sprinkler_installation.jpg";
+import SprinklerInstallationImag2 from "../../assets/img/sprinkler_installation_2.jpg";
 ---
 
 <Layout
@@ -11,7 +14,10 @@ import Layout from "../../layouts/Layout.astro";
 >
   <main class="bg-white">
     <section
-      class="hero-section relative w-full mx-auto py-[200px] bg-roof-hero bg-center bg-no-repeat bg-cover"
+      class="hero-section relative w-full mx-auto py-[200px] bg-center bg-no-repeat bg-cover"
+      style={{
+        backgroundImage: `url(${SprinklerInstallationImage.src})`,
+      }}
     >
       <div class="background-overlay"></div>
 
@@ -80,11 +86,13 @@ import Layout from "../../layouts/Layout.astro";
             </div>
 
             <div class="lg:w-[45%]">
-              <!-- <img
-                src={roofWashing.src}
+              <Image
+                src={SprinklerInstallationImag2}
                 alt="A man power washing the roof of a house"
                 class="mx-auto p-4 lg:p-0"
-              /> -->
+                height={400}
+                width={400}
+              />
             </div>
           </div>
         </div>
